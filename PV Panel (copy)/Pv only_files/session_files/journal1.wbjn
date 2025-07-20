@@ -1,0 +1,156 @@
+# encoding: utf-8
+# 2023 R1
+SetScriptVersion(Version="23.1.153")
+template1 = GetTemplate(TemplateName="Geometry")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.SetFile(FilePath="C:/Users/thumm/Downloads/FFF-1.agdb")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.SetFile(FilePath="C:/Users/thumm/Downloads/Geom.agdb")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.Edit()
+Save(Overwrite=True)
+geometry1.Exit()
+template2 = GetTemplate(TemplateName="EngData")
+system2 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+engineeringData1 = system2.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="Glass")
+matlProp1 = matl1.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2 = matl1.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp3 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["3000 [kg m^-3]"]])
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["1.8 [W m^-1 C^-1]"]])
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["500 [J kg^-1 C^-1]"]])
+matl2 = engineeringData1.CreateMaterial(Name="EVA")
+matlProp4 = matl2.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp5 = matl2.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp6 = matl2.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["960 [kg m^-3]"]])
+matlProp5.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.35 [W m^-1 C^-1]"]])
+matlProp6.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["2090 [J kg^-1 C^-1]"]])
+matl3 = engineeringData1.CreateMaterial(Name="Silicon")
+matlProp7 = matl3.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp8 = matl3.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp9 = matl3.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp7.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["2330 [kg m^-3]"]])
+matlProp8.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["148 [W m^-1 C^-1]"]])
+matlProp9.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["677 [J kg^-1 C^-1]"]])
+matl4 = engineeringData1.CreateMaterial(Name="Tedlar")
+matlProp10 = matl4.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp11 = matl4.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp12 = matl4.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp10.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1200 [kg m^-3]"]])
+matlProp11.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.2 [W m^-1 C^-1]"]])
+matlProp12.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["1250 [J kg^-1 C^-1]"]])
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+matl5 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+Save(Overwrite=True)
+template3 = GetTemplate(
+    TemplateName="Steady-State Thermal",
+    Solver="ANSYS")
+system3 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+engineeringDataComponent1 = system3.GetComponent(Name="Engineering Data")
+engineeringDataComponent2 = system2.GetComponent(Name="Engineering Data")
+engineeringDataComponent1.ReplaceWithShare(
+    TargetSystem=system3,
+    ComponentToShare=engineeringDataComponent2,
+    SourceSystem=system2)
+geometryComponent1 = system3.GetComponent(Name="Geometry")
+geometryComponent2 = system1.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system3,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+modelComponent1 = system3.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system3.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)
+system3.DisplayText = "PV only"
+system3.DisplayText = "PV only 8am"
+system3.Copy(KeepConnections=True)
+system4 = GetSystem(Name="SYS 1")
+system4.Delete()
+Save(Overwrite=True)

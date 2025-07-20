@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimulationExternalLoads>
+
+  <SimulationExternalLoad>
+    <Source>
+      <FEModel>
+        <Name/>
+        <Location/>
+        <Units>
+          <Unit>
+            <Name/>
+          </Unit>
+        </Units>
+      </FEModel>
+      <FieldData>
+        <Name>/DATA READER/CASE:Case FFF.1 1 00100.dat/BOUNDARY:fsi</Name>
+        <Location>C:\Users\thumm\Desktop\work\2023\pv with dielec_files\dp0\FFF\Fluent\FFF.1-1-00100.dat.h5</Location>
+        <Units>
+          <Unit>
+            <Name/>
+          </Unit>
+        </Units>
+        <Index>1</Index>
+        <Time>100</Time>
+      </FieldData>
+    </Source>
+    <Target>
+      <FEModel>
+        <Name>119</Name>
+        <Units system="SI">
+          <Unit>
+            <Name>m</Name>
+          </Unit>
+        </Units>
+        <ANSYSCDB>
+          <Location>C:\Users\thumm\Desktop\work\2023\pv with dielec_files\dp0\SYS\MECH\Import_ANSYS_118.cdb</Location>
+        </ANSYSCDB>
+      </FEModel>
+      <FieldData>
+        <Name>TODO - Field Name</Name>
+        <Location>C:\Users\thumm\Desktop\work\2023\pv with dielec_files\dp0\SYS\MECH\Import_Output_118_FB48.xml</Location>
+        <Units system="SI">
+          <Unit>
+            <Name>°C</Name>
+          </Unit>
+        </Units>
+        <Time>1</Time>
+      </FieldData>
+      <Diagnostic>C:\Users\thumm\Desktop\work\2023\pv with dielec_files\dp0\SYS\MECH\Import_Diagnostics_118.htm</Diagnostic>
+    </Target>
+  </SimulationExternalLoad>
+
+</SimulationExternalLoads>

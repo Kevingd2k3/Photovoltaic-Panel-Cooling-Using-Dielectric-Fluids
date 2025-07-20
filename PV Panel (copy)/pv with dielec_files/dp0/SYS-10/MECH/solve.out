@@ -1,0 +1,2881 @@
+
+ Ansys Mechanical Enterprise                       
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2023 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2023 Ansys, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2023 R1 
+     
+ Point Releases and Patches installed:   
+     
+ ANSYS, Inc. License Manager 2023 R1 
+ Discovery 2023 R1   
+ SpaceClaim 2023 R1  
+ Ansys Sherlock 2023 R1  
+ Autodyn 2023 R1 
+ LS-DYNA 2023 R1 
+ CFD-Post only 2023 R1   
+ CFX (includes CFD-Post) 2023 R1 
+ Chemkin 2023 R1 
+ EnSight 2023 R1 
+ FENSAP-ICE 2023 R1  
+ Fluent (includes CFD-Post) 2023 R1  
+ Polyflow (includes CFD-Post) 2023 R1
+ Forte (includes EnSight) 2023 R1
+ TurboGrid 2023 R1   
+ ICEM CFD 2023 R1
+ Motion 2023 R1  
+ Aqwa 2023 R1
+ Speos 2023 R1   
+ Speos HPC 2023 R1   
+ optiSLang 2023 R1   
+ Additive 2023 R1
+ Customization Files for User Programmable Features 2023 R1  
+ Mechanical Products 2023 R1 
+ Icepak (includes CFD-Post) 2023 R1  
+ Remote Solve Manager Standalone Services 2023 R1
+ Ansys Sound - SAS 2023 R1   
+ Viewer 2023 R1  
+ ACIS Geometry Interface 2023 R1 
+ AutoCAD Geometry Interface 2023 R1  
+ Catia, Version 4 Geometry Interface 2023 R1 
+ Catia, Version 5 Geometry Interface 2023 R1 
+ Catia, Version 6 Geometry Interface 2023 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2023 R1
+ Creo Parametric Geometry Interface 2023 R1  
+ Inventor Geometry Interface 2023 R1 
+ JTOpen Geometry Interface 2023 R1   
+ NX Geometry Interface 2023 R1   
+ Parasolid Geometry Interface  2023 R1   
+ Solid Edge Geometry Interface 2023 R1   
+ SOLIDWORKS Geometry Interface 2023 R1   
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  BATCH MODE REQUESTED (-b)    = NOLIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  DISTRIBUTED MEMORY PARALLEL REQUESTED
+       4 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     4 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A\dummy.dat
+  OUTPUT FILE NAME             = C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A\solve.out
+  START-UP FILE MODE           = NOREAD
+  STOP FILE MODE               = NOREAD
+
+ RELEASE= 2023 R1              BUILD= 23.1      UP20221128   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file0  19:21:07  FEB 06, 2025 CP=      0.000
+
+
+ PARAMETER _DS_PROGRESS =     999.0000000    
+
+ /INPUT FILE= ds.dat  LINE=       0
+
+
+
+ *** NOTE ***                            CP =       0.016   TIME= 19:21:07
+ The /CONFIG,NOELDB command is not valid in a distributed memory         
+ parallel solution.  Command is ignored.                                 
+
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3519444    
+
+ TITLE= 
+ pv with dielec--Transient Thermal (Q5)                                        
+
+  ACT Extensions:
+      LSDYNA, 2023.1
+      5f463412-bd3e-484b-87e7-cbc0a665e474, wbex
+ /COM,     ANSYSMotion, 2023.1
+      20180725-3f81-49eb-9f31-41364844c769, wbex
+  
+
+ SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A\
+
+ SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_SOLVERFILES_DIR(1) = C:\Users\thumm\Desktop\work\2023\pv with dielec_files\dp0\SYS-10\MECH\
+
+ SET PARAMETER DIMENSIONS ON  _WB_USERFILES_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_USERFILES_DIR(1) = C:\Users\thumm\Desktop\work\2023\pv with dielec_files\user_files\
+ --- Data in consistent MKS units. See Solving Units in the help system for more
+
+ MKS UNITS SPECIFIED FOR INTERNAL    
+  LENGTH        (l)  = METER (M)
+  MASS          (M)  = KILOGRAM (KG)
+  TIME          (t)  = SECOND (SEC)
+  TEMPERATURE   (T)  = CELSIUS (C)
+  TOFFSET            = 273.0
+  CHARGE        (Q)  = COULOMB
+  FORCE         (f)  = NEWTON (N) (KG-M/SEC2)
+  HEAT               = JOULE (N-M)
+
+  PRESSURE           = PASCAL (NEWTON/M**2)
+  ENERGY        (W)  = JOULE (N-M)
+  POWER         (P)  = WATT (N-M/SEC)
+  CURRENT       (i)  = AMPERE (COULOMBS/SEC)
+  CAPACITANCE   (C)  = FARAD
+  INDUCTANCE    (L)  = HENRY
+  MAGNETIC FLUX      = WEBER
+  RESISTANCE    (R)  = OHM
+  ELECTRIC POTENTIAL = VOLT
+
+ INPUT  UNITS ARE ALSO SET TO MKS 
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   19:21:07  FEB 06, 2025 CP=      0.031
+
+ pv with dielec--Transient Thermal (Q5)                                        
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+ *********** Nodes for the whole assembly ***********
+ *********** Elements for Body 1 "PV cell" ***********
+ *********** Elements for Body 2 "EVA 1" ***********
+ *********** Elements for Body 3 "EVA 2" ***********
+ *********** Elements for Body 4 "Glass" ***********
+ *********** Elements for Body 5 "Tedlar" ***********
+ *********** Elements for Body 6 "Support" ***********
+ *********** Send User Defined Coordinate System(s) ***********
+ *********** Send Materials ***********
+ *********** Create Contact "Bonded - Glass To EVA 1" ***********
+             Real Constant Set For Above Contact Is 8 & 7
+ *********** Create Contact "Bonded - EVA 1 To PV cell" ***********
+             Real Constant Set For Above Contact Is 10 & 9
+ *********** Create Contact "Bonded - PV cell To EVA 2" ***********
+             Real Constant Set For Above Contact Is 12 & 11
+ *********** Create Contact "Bonded - EVA 2 To Tedlar" ***********
+             Real Constant Set For Above Contact Is 14 & 13
+ *********** Create Contact "Bonded - Tedlar To Support" ***********
+             Real Constant Set For Above Contact Is 16 & 15
+ *********** Create Contact "Bonded - Tedlar To Support" ***********
+             Real Constant Set For Above Contact Is 18 & 17
+ *********** Create Contact "Contact Region" ***********
+             Real Constant Set For Above Contact Is 20 & 19
+ *********** Create Contact "Contact Region 2" ***********
+             Real Constant Set For Above Contact Is 22 & 21
+ *********** Create Contact "Contact Region 3" ***********
+             Real Constant Set For Above Contact Is 24 & 23
+ *********** Create Contact "Contact Region 4" ***********
+             Real Constant Set For Above Contact Is 26 & 25
+ *********** Create Contact "Contact Region 5" ***********
+             Real Constant Set For Above Contact Is 28 & 27
+ *********** Create Contact "Contact Region 6" ***********
+             Real Constant Set For Above Contact Is 30 & 29
+ *********** Create Contact "Contact Region 7" ***********
+             Real Constant Set For Above Contact Is 32 & 31
+ *********** Create Contact "Contact Region 8" ***********
+             Real Constant Set For Above Contact Is 34 & 33
+ *********** Create Contact "Contact Region 9" ***********
+             Real Constant Set For Above Contact Is 36 & 35
+ *********** Create Contact "Contact Region 10" ***********
+             Real Constant Set For Above Contact Is 38 & 37
+ *********** Create Contact "Contact Region 11" ***********
+             Real Constant Set For Above Contact Is 40 & 39
+ *********** Create Contact "Contact Region 12" ***********
+             Real Constant Set For Above Contact Is 42 & 41
+ *********** Create Contact "Contact Region 13" ***********
+             Real Constant Set For Above Contact Is 44 & 43
+ *********** Create Contact "Contact Region 14" ***********
+             Real Constant Set For Above Contact Is 46 & 45
+ *********** Create Contact "Contact Region 15" ***********
+             Real Constant Set For Above Contact Is 48 & 47
+ *********** Create "Heat Flux" ***********
+ *********** Create "Convection" ***********
+ *********** Create "Internal Heat Generation" ***********
+ *********** Send Solved Initial Temperatures ***********
+
+ PRINTOUT RESUMED BY /GOP
+
+ Graphical-Solution-Tracking set to ON
+ For /MENU,ON or /MENU,GRPH operations, GST ToFile option is ON  
+
+
+ ***** ROUTINE COMPLETED *****  CP =         6.016
+
+
+
+ *GET  _NUMNODE  FROM  NODE  ITEM=COUN       VALUE=  264877.000     
+
+ *GET  _NUMELEM  FROM  ELEM  ITEM=COUN           VALUE=  666900.000    
+
+ *GET  _MAXELEMNUM  FROM  ELEM  ITEM=NUM  MAX       VALUE=  742054.000    
+
+ *GET  _MAXNODENUM  FROM  NODE  ITEM=NUM  MAX   VALUE=  264877.000     
+
+ *GET  _MAXELEMTYPE  FROM  ETYP  ITEM=NUM  MAX   VALUE=  50.0000000    
+
+ *GET  _MAXREALCONST  FROM  RCON  ITEM=NUM  MAX   VALUE=  48.0000000    
+ --- Number of total nodes = 264877
+ --- Number of contact elements = 629200
+ --- Number of spring elements = 0
+ --- Number of bearing elements = 0
+ --- Number of solid elements = 37700
+ --- Number of condensed parts = 0
+ --- Number of total elements = 666900
+
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.3530556    
+ ****************************************************************************
+ *************************    SOLUTION       ********************************
+ ****************************************************************************
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A TRANSIENT ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ STEP BOUNDARY CONDITION KEY= 1
+
+ CONTACT INFORMATION PRINTOUT LEVEL       1
+
+ DO NOT SAVE ANY RESTART FILES AT ALL
+
+ DO NOT COMBINE ELEMENT MATRIX FILES (.emat) AFTER DISTRIBUTED PARALLEL SOLUTION
+
+ DO NOT COMBINE ELEMENT SAVE DATA FILES (.esav) AFTER DISTRIBUTED PARALLEL SOLUTION
+
+ Use Quasi-Linear Thermal Transient Solution
+   Tolerance for Reform of Thermal Matrix=     0.050
+   ***** Fast Property Table Information *****
+    Number of entries per property=    64
+    Minimum temperature =   -100.00
+    Maximum temperature =    200.00
+  Enable multipass algorithm
+
+ NLHIST: ADDED NODAL RESULTS HISTORY FOR:
+       NAME = MAX_TEMP                        
+  ITEM/COMP = TEMPMAX 
+       NODE =         0
+
+ NLHIST: ADDED NODAL RESULTS HISTORY FOR:
+       NAME = MIN_TEMP                        
+  ITEM/COMP = TEMPMIN 
+       NODE =         0
+ ********* Initial Time Increment Check And Fourier Modulus *********
+  Specified Initial Time Increment: 0.6
+  Estimated Increment Needed, le*le/alpha, Body 1: 0.124659
+  Estimated Increment Needed, le*le/alpha, Body 2: 77.803
+  Estimated Increment Needed, le*le/alpha, Body 3: 77.803
+  Estimated Increment Needed, le*le/alpha, Body 4: 37.345
+  Estimated Increment Needed, le*le/alpha, Body 5: 34.8119
+  Estimated Increment Needed, le*le/alpha, Body 6: 0.491507
+ ****************************************************
+ ******************* SOLVE FOR LS 1 OF 1 ****************
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        49 TO         49 STEP          1
+
+       6000  ELEMENTS (OF     666900  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      18321 NODES (OF     264877  DEFINED) SELECTED FROM
+     6000 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUE =   54.0000000    
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =       6000
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     264877 STEP          1
+
+     264877  NODES (OF     264877  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO     742054 STEP          1
+
+     666900  ELEMENTS (OF     666900  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        50 TO         50 STEP          1
+
+       6000  ELEMENTS (OF     666900  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      18321 NODES (OF     264877  DEFINED) SELECTED FROM
+     6000 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD CONV ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUES=  20.0000000      35.0000000    
+
+ NUMBER OF CONV ELEMENT FACE LOADS STORED =       6000
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     264877 STEP          1
+
+     264877  NODES (OF     264877  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO     742054 STEP          1
+
+     666900  ELEMENTS (OF     666900  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SPECIFIED BODY FORCE HGEN FOR ALL PICKED ELEMENTS AT STARTING LOCATION      1
+    416666.000      0.00000000      0.00000000      0.00000000    
+
+ PRINTOUT RESUMED BY /GOP
+
+ USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ USE     100 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE   1000 SUBSTEPS AS A MAXIMUM
+   USE     10 SUBSTEPS AS A MINIMUM
+
+ TIME=  60.000    
+
+ INCLUDE TRANSIENT EFFECTS FOR  ALL DEGREES OF FREEDOM THIS LOAD STEP
+
+ ERASE THE CURRENT DATABASE OUTPUT CONTROL TABLE.
+
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF NONE
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE NSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE RSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE EANG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE VENG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE FFLU ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE CONT ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ PRINTOUT RESUMED BY /GOP
+
+ WRITE MISC ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR THE ENTITIES DEFINED BY COMPONENT _ELMISC 
+
+ CONVERGENCE ON HEAT BASED ON THE NORM OF THE N-R LOAD
+   WITH A TOLERANCE OF 0.1000E-02 AND A MINIMUM REFERENCE VALUE OF 0.1000E-05
+   USING THE L2 NORM (CHECK THE SRSS VALUE)
+
+ *GET  ANSINTER_  FROM  ACTI  ITEM=INT        VALUE=  0.00000000    
+
+ *IF  ANSINTER_                         ( =   0.00000     )  NE  
+      0                                 ( =   0.00000     )  THEN    
+
+ *ENDIF
+
+ *** NOTE ***                            CP =       8.016   TIME= 19:21:11
+ The automatic domain decomposition logic has selected the MESH domain   
+ decomposition method with 4 processes per solution.                     
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** WARNING ***                         CP =       8.188   TIME= 19:21:11
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** NOTE ***                            CP =       8.703   TIME= 19:21:12
+ The model data was checked and warning messages were found.             
+  Please review output or errors file (                                  
+ C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A\file0.err )    
+ for these warning messages.                                             
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   19:21:12  FEB 06, 2025 CP=      8.828
+
+ pv with dielec--Transient Thermal (Q5)                                        
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . TEMP
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .TRANSIENT            
+      SOLUTION METHOD. . . . . . . . . . . . . . .QUASI                
+   OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
+   NEWTON-RAPHSON OPTION . . . . . . . . . . . . .PROGRAM CHOSEN   
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** WARNING ***                         CP =       9.891   TIME= 19:21:13
+ Material number 49 (used by element 730055) should normally have at     
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** NOTE ***                            CP =      10.281   TIME= 19:21:13
+ The step data was checked and warning messages were found.              
+  Please review output or errors file (                                  
+ C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A\file0.err )    
+ for these warning messages.                                             
+
+ *** NOTE ***                            CP =      10.281   TIME= 19:21:13
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 7 and contact element type 7 has been set up.  The         
+ companion pair has real constant set ID 8.  Both pairs should have the  
+ same behavior.                                                          
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 118857 and target element 130857.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 8 and contact element type 7 has been set up.  The         
+ companion pair has real constant set ID 7.  Both pairs should have the  
+ same behavior.                                                          
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 129401 and target element 117401.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 9 and contact element type 9 has been set up.  The         
+ companion pair has real constant set ID 10.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.084202172E-19 was detected between contact  
+ element 144195 and target element 156195.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 10 and contact element type 9 has been set up.  The        
+ companion pair has real constant set ID 9.  Both pairs should have the  
+ same behavior.                                                          
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.168404345E-19 was detected between contact  
+ element 152465 and target element 140465.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 11 and contact element type 11 has been set up.  The       
+ companion pair has real constant set ID 12.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.982125011E-33 was detected between contact  
+ element 166855 and target element 178954.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 12 and contact element type 11 has been set up.  The       
+ companion pair has real constant set ID 11.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.982125011E-33 was detected between contact  
+ element 172954 and target element 160855.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 13 and contact element type 13 has been set up.  The       
+ companion pair has real constant set ID 14.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.168404345E-19 was detected between contact  
+ element 195408 and target element 207408.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 14 and contact element type 13 has been set up.  The       
+ companion pair has real constant set ID 13.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 196898 and target element 184898.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 15 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 16.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.084202172E-19 was detected between contact  
+ element 214898 and target element 232811.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 16 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 15.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 224269 and target element 211440.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 17 and contact element type 17 has been set up.  The       
+ companion pair has real constant set ID 18.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.68306E-02
+ Average contact pair depth                   0.10000E-01
+ Average target surface length                0.72500E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.25000E-02
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.220446049E-16 was detected between contact  
+ element 233251 and target element 233458.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 18 and contact element type 17 has been set up.  The       
+ companion pair has real constant set ID 17.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.89478E-02
+ Average contact pair depth                   0.27866E-02
+ Average target surface length                0.50500E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.69665E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 19 and contact element type 19 has been set up.  The       
+ companion pair has real constant set ID 20.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.168404345E-19 was detected between contact  
+ element 255265 and target element 279265.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 20 and contact element type 19 has been set up.  The       
+ companion pair has real constant set ID 19.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.084202172E-19 was detected between contact  
+ element 264995 and target element 240995.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 21 and contact element type 21 has been set up.  The       
+ companion pair has real constant set ID 22.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.982125011E-33 was detected between contact  
+ element 293655 and target element 317754.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 22 and contact element type 21 has been set up.  The       
+ companion pair has real constant set ID 21.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.982125011E-33 was detected between contact  
+ element 305754 and target element 281655.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 23 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 24.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 5.E-04 was detected between contact element 340201    
+ and target element 352201.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 24 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 23.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 5.E-04 was detected between contact element 341655    
+ and target element 329655.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 25 and contact element type 25 has been set up.  The       
+ companion pair has real constant set ID 26.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 5.E-04 was detected between contact element 370201    
+ and target element 394208.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 26 and contact element type 25 has been set up.  The       
+ companion pair has real constant set ID 25.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 5.E-04 was detected between contact element 377655    
+ and target element 353754.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 27 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 28.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98980E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 413958 and target element 426358.                               
+  
+ Max.  Geometric gap 6.E-04 has been detected between contact element    
+ 408960 and target element 425260.                                       
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 28 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 27.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98452E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.220446049E-16 was detected between contact  
+ element 420155 and target element 407755.                               
+  
+ Max.  Geometric gap 6.E-04 has been detected between contact element    
+ 414155 and target element 407655.                                       
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 29 and contact element type 29 has been set up.  The       
+ companion pair has real constant set ID 30.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 4.E-04 was detected between contact element 438455    
+ and target element 462554.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 30 and contact element type 29 has been set up.  The       
+ companion pair has real constant set ID 29.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 4.E-04 was detected between contact element 450639    
+ and target element 426570.                                              
+ Contact is detected due to initial settings.                            
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 31 and contact element type 31 has been set up.  The       
+ companion pair has real constant set ID 32.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 485001 and target element 497001.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 32 and contact element type 31 has been set up.  The       
+ companion pair has real constant set ID 31.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 486457 and target element 474457.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 33 and contact element type 33 has been set up.  The       
+ companion pair has real constant set ID 34.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 34 and contact element type 33 has been set up.  The       
+ companion pair has real constant set ID 33.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 35 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 36.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98981E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 534755 and target element 547155.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 36 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 35.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98468E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 37 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 38.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 38 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 37.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 39 and contact element type 39 has been set up.  The       
+ companion pair has real constant set ID 40.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 6.E-04 was detected between contact element   
+ 586186 and target element 610186.                                       
+ You may move entire target surface by : x= 0, y= 0, z= 6.E-04,to reduce 
+ initial penetration.                                                    
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 40 and contact element type 39 has been set up.  The       
+ companion pair has real constant set ID 39.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 6.E-04 was detected between contact element   
+ 595255 and target element 571255.                                       
+ You may move entire target surface by : x= -6.505213035E-21, y=         
+ -2.888894917E-34, z= -6.E-04,to reduce initial penetration.             
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 41 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 42.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98981E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 625563 and target element 638046.                               
+  
+ Max.  Geometric gap 1.E-04 has been detected between contact element    
+ 625656 and target element 644053.                                       
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 42 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 41.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98468E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Min.  Initial gap 1.E-04 was detected between contact element 631978    
+ and target element 625331.                                              
+ Contact is detected due to initial settings.                            
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 43 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 44.  Both pairs should have     
+ the same behavior.                                                      
+ *WARNING*: The contact pairs have similar mesh patterns.  MAPDL will    
+ keep the current pair and deactivate its companion pair.                
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 44 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 43.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 45 and contact element type 45 has been set up.  The       
+ companion pair has real constant set ID 46.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99543E-02
+ Average contact pair depth                   0.31148E-02
+ Average target surface length                0.99141E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.77869E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 686363 and target element 704963.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 46 and contact element type 45 has been set up.  The       
+ companion pair has real constant set ID 45.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99671E-02
+ Average contact pair depth                   0.29933E-02
+ Average target surface length                0.99426E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74833E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 698556 and target element 674156.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 47 and contact element type 47 has been set up.  The       
+ companion pair has real constant set ID 48.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98978E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 2.220446049E-16 was detected between contact  
+ element 711651 and target element 723958.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 48 and contact element type 47 has been set up.  The       
+ companion pair has real constant set ID 47.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98403E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      43.062   TIME= 19:21:48
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 721269 and target element 708040.                               
+ ****************************************
+  
+  
+  
+
+  
+  
+     D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
+  
+  ...Number of elements: 666900
+  ...Number of nodes:    264877
+  ...Decompose to 4 CPU domains
+  ...Element load balance ratio =     1.082
+
+
+ *** NOTE ***                            CP =      49.156   TIME= 19:21:53
+ The initial memory allocation (-m) has been exceeded.                   
+  Supplemental memory allocations are being used.                        
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  60.000    
+   AUTOMATIC TIME STEPPING . . . . . . . . . . . .    ON
+      INITIAL NUMBER OF SUBSTEPS . . . . . . . . .   100
+      MAXIMUM NUMBER OF SUBSTEPS . . . . . . . . .  1000
+      MINIMUM NUMBER OF SUBSTEPS . . . . . . . . .    10
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-02   2     0.1000E-05
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       NONE               
+      NSOL        ALL               
+      RSOL        ALL               
+      EANG        ALL               
+      VENG        ALL               
+      FFLU        ALL               
+      CONT        ALL               
+      MISC        ALL       _ELMISC 
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 15 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 16.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 1.084202172E-19 was detected between contact  
+ element 214898 and target element 232811.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 16 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 15.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 224269 and target element 211440.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 27 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 28.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98980E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 413958 and target element 426358.                               
+  
+ Max.  Geometric gap 6.E-04 has been detected between contact element    
+ 408960 and target element 425260.                                       
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 28 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 27.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98452E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 2.220446049E-16 was detected between contact  
+ element 420155 and target element 407755.                               
+  
+ Max.  Geometric gap 6.E-04 has been detected between contact element    
+ 414155 and target element 407655.                                       
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 35 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 36.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98981E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 534755 and target element 547155.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 36 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 35.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98468E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 41 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 42.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98981E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 1.110223025E-16 was detected between contact  
+ element 625563 and target element 638046.                               
+  
+ Max.  Geometric gap 1.E-04 has been detected between contact element    
+ 625656 and target element 644053.                                       
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 42 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 41.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98468E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Min.  Initial gap 1.E-04 was detected between contact element 631978    
+ and target element 625331.                                              
+ Contact is detected due to initial settings.                            
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 43 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 44.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 44 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 43.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.10000E-01
+ Average contact pair depth                   0.30000E-02
+ Average target surface length                0.10000E-01
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.75000E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ No contact was detected for this contact pair.                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 47 and contact element type 47 has been set up.  The       
+ companion pair has real constant set ID 48.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.98978E-02
+ Average contact pair depth                   0.32258E-02
+ Average target surface length                0.99113E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80645E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 2.220446049E-16 was detected between contact  
+ element 711651 and target element 723958.                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 48 and contact element type 47 has been set up.  The       
+ companion pair has real constant set ID 47.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Pure thermal contact is activated.
+ The emissivity is defined through the material property.
+ Thermal convection coefficient, environment temperature, and
+  heat flux are defined using the SFE command.
+ Target temperature is used for convection/radiation calculation
+  for near field contact.
+ Linear contact is defined
+ Contact detection at: Gauss integration point
+ Average contact surface length               0.99661E-02
+ Average contact pair depth                   0.29931E-02
+ Average target surface length                0.98403E-02
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.74828E-03
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+ Thermal contact conductance coef. TCC        0.14979E+07
+ Heat radiation is excluded.
+
+ *** NOTE ***                            CP =      57.234   TIME= 19:22:01
+ Max.  Initial penetration 3.252606517E-19 was detected between contact  
+ element 721269 and target element 708040.                               
+ ****************************************
+  
+
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          15
+ Max.  Penetration of -2.168404345E-19 has been detected between contact 
+ element 216851 and target element 230858.                               
+  
+ Max.  Geometrical gap of 3.252606517E-19 has been detected between      
+ contact element 217005 and target element 230704.                       
+ Contacting area 0.6.                                                    
+ Max.  Pinball distance 7.500000298E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          16
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          27
+ Max.  Penetration of -2.220446049E-16 has been detected between contact 
+ element 414016 and target element 426416.                               
+  
+ Max.  Geometrical gap of 6.E-04 has been detected between contact       
+ element 408023 and target element 426323.                               
+ *WARNING*: The geometrical gap may be too large.  Increase pinball if   
+ it is a true geometrical gap.  Decrease pinball if it is a false one.   
+ Contacting area 0.6008.                                                 
+ Max.  Pinball distance 8.064516417E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          28
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          35
+ Max.  Penetration of -2.220446049E-16 has been detected between contact 
+ element 534758 and target element 547158.                               
+ Contacting area 1.E-03.                                                 
+ Max.  Pinball distance 8.064516417E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          36
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          41
+ Max.  Penetration of -2.220446049E-16 has been detected between contact 
+ element 625598 and target element 638011.                               
+  
+ Max.  Geometrical gap of 1.E-04 has been detected between contact       
+ element 626822 and target element 642887.                               
+ Contacting area 0.601.                                                  
+ Max.  Pinball distance 8.064516417E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          42
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          43
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ No contact was detected.                                                
+ Max.  Pinball distance 7.500000298E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          44
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          47
+ Max.  Penetration of -1.110223025E-16 has been detected between contact 
+ element 711582 and target element 724027.                               
+  
+ Max.  Geometrical gap of 3.330669074E-16 has been detected between      
+ contact element 711640 and target element 723969.                       
+ Contacting area 0.6002.                                                 
+ Max.  Pinball distance 8.064516417E-04.                                 
+ One of the contact searching regions contains at least 9 target         
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          48
+
+ *** NOTE ***                            CP =      64.875   TIME= 19:22:11
+ Contact pair is inactive.                                               
+
+
+
+            **** CENTER OF MASS, MASS, AND MASS MOMENTS OF INERTIA ****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+  TOTAL MASS =   10.136    
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+  CENTER OF MASS            ABOUT ORIGIN        ABOUT CENTER OF MASS
+
+  XC =  0.50000          IXX =    1.228          IXX =   0.3161    
+  YC =  0.30000          IYY =    3.379          IYY =   0.8446    
+  ZC =  0.84053E-03      IZZ =    4.607          IZZ =    1.161    
+                         IXY =   -1.520          IXY =  -0.1295E-12
+                         IYZ =  -0.2556E-02      IYZ =  -0.5354E-06
+                         IZX =  -0.4260E-02      IZX =  -0.1995E-15
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1  0.559200    
+     2  0.288000    
+     3  0.288000    
+     4   5.40000    
+     5  0.720000E-01
+     6   3.52898    
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 22.9435281 at element 6100.                                   
+ Minimum = 3.555555556E-04 at element 741955.                            
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      6000  SOLID279      0.312   0.000052
+        2      6000  SOLID279      0.125   0.000021
+        3      6000  SOLID279      0.156   0.000026
+        4      6000  SOLID279      0.109   0.000018
+        5      6000  SOLID279      0.141   0.000023
+        6      7700  SOLID279      0.250   0.000032
+        7     12000  CONTA174      0.609   0.000051
+        8     12000  TARGE170      0.062   0.000005
+        9     12000  CONTA174      0.438   0.000036
+       10     12000  TARGE170      0.062   0.000005
+       11     12000  CONTA174      0.594   0.000049
+       12     12000  TARGE170      0.000   0.000000
+       13     12000  CONTA174      0.453   0.000038
+       14     12000  TARGE170      0.000   0.000000
+       15     12000  CONTA174      0.562   0.000047
+       16     12000  TARGE170      0.016   0.000001
+       17       400  CONTA174      0.016   0.000039
+       18       400  TARGE170      0.000   0.000000
+       19     24000  CONTA174      1.016   0.000042
+       20     24000  TARGE170      0.031   0.000001
+       21     24000  CONTA174      1.016   0.000042
+       22     24000  TARGE170      0.031   0.000001
+       23     12000  CONTA174      0.391   0.000033
+       24     12000  TARGE170      0.031   0.000003
+       25     24000  CONTA174      1.188   0.000049
+       26     24000  TARGE170      0.047   0.000002
+       27     12400  CONTA174      0.578   0.000047
+       28     12400  TARGE170      0.000   0.000000
+       29     24000  CONTA174      0.797   0.000033
+       30     24000  TARGE170      0.094   0.000004
+       31     12000  CONTA174      0.422   0.000035
+       32     12000  TARGE170      0.031   0.000003
+       33     12000  CONTA174      0.344   0.000029
+       34     12000  TARGE170      0.047   0.000004
+       35     12400  CONTA174      0.422   0.000034
+       36     12400  TARGE170      0.000   0.000000
+       37     12000  CONTA174      0.266   0.000022
+       38     12000  TARGE170      0.000   0.000000
+       39     24000  CONTA174      1.188   0.000049
+       40     24000  TARGE170      0.062   0.000003
+       41     12400  CONTA174      0.438   0.000035
+       42     12400  TARGE170      0.016   0.000001
+       43     12000  CONTA174      0.312   0.000026
+       44     12000  TARGE170      0.000   0.000000
+       45     18600  CONTA174      0.422   0.000023
+       46     18600  TARGE170      0.047   0.000003
+       47     12400  CONTA174      0.594   0.000048
+       48     12400  TARGE170      0.000   0.000000
+       49      6000  SURF152       0.062   0.000010
+       50      6000  SURF152       0.047   0.000008
+ Time at end of element matrix formulation CP = 64.875.                  
+
+ DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =      264877,    Maximum wavefront =    142
+
+  Process memory allocated for solver              =   575.594 MB
+  Process memory required for in-core solution     =   554.127 MB
+  Process memory required for out-of-core solution =   256.300 MB
+
+  Total memory allocated for solver                =  2074.788 MB
+  Total memory required for in-core solution       =  1987.112 MB
+  Total memory required for out-of-core solution   =   727.328 MB
+
+ *** NOTE ***                            CP =      68.266   TIME= 19:22:16
+ The Distributed Sparse Matrix Solver is currently running in the        
+ in-core memory mode.  This memory mode uses the most amount of memory   
+ in order to avoid using the hard drive as much as possible, which most  
+ often results in the fastest solution time.  This mode is recommended   
+ if enough physical memory is present to accommodate all of the solver   
+ data.                                                                   
+ Distributed sparse solver maximum pivot= 190.743542 at node 79801 TEMP. 
+ Distributed sparse solver minimum pivot= 3.436492577E-02 at node 12300  
+ TEMP.                                                                   
+ Distributed sparse solver minimum pivot in absolute value=              
+ 3.436492577E-02 at node 12300 TEMP.                                     
+ Max. Temperature Change=      0.34
+ Property Change        =   0.00090
+ Property Change Limit  =   0.05000
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      6000  SOLID279      0.031   0.000005
+        2      6000  SOLID279      0.062   0.000010
+        3      6000  SOLID279      0.109   0.000018
+        4      6000  SOLID279      0.156   0.000026
+        5      6000  SOLID279      0.047   0.000008
+        6      7700  SOLID279      0.031   0.000004
+        7     12000  CONTA174      0.141   0.000012
+        9     12000  CONTA174      0.047   0.000004
+       11     12000  CONTA174      0.125   0.000010
+       13     12000  CONTA174      0.141   0.000012
+       15     12000  CONTA174      0.203   0.000017
+       17       400  CONTA174      0.000   0.000000
+       19     24000  CONTA174      0.203   0.000008
+       21     24000  CONTA174      0.109   0.000005
+       23     12000  CONTA174      0.078   0.000007
+       25     24000  CONTA174      0.250   0.000010
+       27     12400  CONTA174      0.125   0.000010
+       29     24000  CONTA174      0.234   0.000010
+       31     12000  CONTA174      0.078   0.000007
+       33     12000  CONTA174      0.078   0.000007
+       35     12400  CONTA174      0.031   0.000003
+       37     12000  CONTA174      0.047   0.000004
+       39     24000  CONTA174      0.219   0.000009
+       41     12400  CONTA174      0.047   0.000004
+       43     12000  CONTA174      0.125   0.000010
+       45     18600  CONTA174      0.031   0.000002
+       47     12400  CONTA174      0.125   0.000010
+       49      6000  SURF152       0.016   0.000003
+       50      6000  SURF152       0.016   0.000003
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      6000  SOLID279      0.016   0.000003
+        2      6000  SOLID279      0.000   0.000000
+        3      6000  SOLID279      0.016   0.000003
+        4      6000  SOLID279      0.016   0.000003
+        5      6000  SOLID279      0.000   0.000000
+        6      7700  SOLID279      0.062   0.000008
+        7     12000  CONTA174      0.000   0.000000
+        9     12000  CONTA174      0.016   0.000001
+       11     12000  CONTA174      0.016   0.000001
+       13     12000  CONTA174      0.000   0.000000
+       15     12000  CONTA174      0.016   0.000001
+       17       400  CONTA174      0.000   0.000000
+       19     24000  CONTA174      0.000   0.000000
+       21     24000  CONTA174      0.031   0.000001
+       23     12000  CONTA174      0.000   0.000000
+       25     24000  CONTA174      0.000   0.000000
+       27     12400  CONTA174      0.016   0.000001
+       29     24000  CONTA174      0.016   0.000001
+       31     12000  CONTA174      0.000   0.000000
+       33     12000  CONTA174      0.000   0.000000
+       35     12400  CONTA174      0.000   0.000000
+       37     12000  CONTA174      0.000   0.000000
+       39     24000  CONTA174      0.031   0.000001
+       41     12400  CONTA174      0.016   0.000001
+       43     12000  CONTA174      0.000   0.000000
+       45     18600  CONTA174      0.031   0.000002
+       47     12400  CONTA174      0.016   0.000001
+       49      6000  SURF152       0.000   0.000000
+       50      6000  SURF152       0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =  0.600000         TIME INC =  0.600000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE =  2.085       OSCILLATION LIMIT =  1.251    
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.23983      DECREASED (FACTOR = 0.3997)
+
+ Max. Temperature Change=      0.41
+ Property Change        =   0.00108
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     2  COMPLETED.    CUM ITER =      2
+ *** TIME =  0.839825         TIME INC =  0.239825      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.6317       OSCILLATION LIMIT = 0.1515    
+ *** AUTO STEP TIME:  NEXT TIME INC = 0.23983      UNCHANGED
+
+ Max. Temperature Change=      0.47
+ Property Change        =   0.00122
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     3  COMPLETED.    CUM ITER =      3
+ *** TIME =   1.07965         TIME INC =  0.239825      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.3652       OSCILLATION LIMIT = 0.8759E-01
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.71948      INCREASED (FACTOR = 3.0000)
+
+ Max. Temperature Change=      0.56
+ Property Change        =   0.00147
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     4  COMPLETED.    CUM ITER =      4
+ *** TIME =   1.79913         TIME INC =  0.719476      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1663       OSCILLATION LIMIT = 0.1197    
+ *** AUTO TIME STEP:  NEXT TIME INC =  2.1584      INCREASED (FACTOR = 3.0000)
+
+ Max. Temperature Change=      0.71
+ Property Change        =   0.00186
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     5  COMPLETED.    CUM ITER =      5
+ *** TIME =   3.95755         TIME INC =   2.15843      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.5873E-01   OSCILLATION LIMIT = 0.1268    
+ *** AUTO TIME STEP:  NEXT TIME INC =  6.0000      INCREASED (FACTOR = 2.7798)
+
+ Max. Temperature Change=      0.86
+ Property Change        =   0.00224
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     6  COMPLETED.    CUM ITER =      6
+ *** TIME =   9.95755         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1280E-01   OSCILLATION LIMIT = 0.7683E-01
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.02
+ Property Change        =   0.00268
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     7  COMPLETED.    CUM ITER =      7
+ *** TIME =   15.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.3872E-02   OSCILLATION LIMIT = 0.2323E-01
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.22
+ Property Change        =   0.00318
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     8  COMPLETED.    CUM ITER =      8
+ *** TIME =   21.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1520E-02   OSCILLATION LIMIT = 0.9123E-02
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.39
+ Property Change        =   0.00363
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP     9  COMPLETED.    CUM ITER =      9
+ *** TIME =   27.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.7257E-03   OSCILLATION LIMIT = 0.4354E-02
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.55
+ Property Change        =   0.00405
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    10  COMPLETED.    CUM ITER =     10
+ *** TIME =   33.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.4026E-03   OSCILLATION LIMIT = 0.2415E-02
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.71
+ Property Change        =   0.00446
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    11  COMPLETED.    CUM ITER =     11
+ *** TIME =   39.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.2514E-03   OSCILLATION LIMIT = 0.1508E-02
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      1.86
+ Property Change        =   0.00485
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    12  COMPLETED.    CUM ITER =     12
+ *** TIME =   45.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1725E-03   OSCILLATION LIMIT = 0.1035E-02
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      2.00
+ Property Change        =   0.00524
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    13  COMPLETED.    CUM ITER =     13
+ *** TIME =   51.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1276E-03   OSCILLATION LIMIT = 0.7659E-03
+ *** AUTO STEP TIME:  NEXT TIME INC =  6.0000      UNCHANGED
+
+ Max. Temperature Change=      2.15
+ Property Change        =   0.00563
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    14  COMPLETED.    CUM ITER =     14
+ *** TIME =   57.9576         TIME INC =   6.00000      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.1004E-03   OSCILLATION LIMIT = 0.6022E-03
+ *** AUTO TIME STEP:  NEXT TIME INC =  2.0424      DECREASED (FACTOR = 0.3404)
+
+ Max. Temperature Change=      2.20
+ Property Change        =   0.00576
+ Property Change Limit  =   0.05000
+ *** LOAD STEP     1   SUBSTEP    15  COMPLETED.    CUM ITER =     15
+ *** TIME =   60.0000         TIME INC =   2.04245      NEW TRIANG MATRIX
+ *** RESPONSE EIGENVALUE = 0.9309E-04   OSCILLATION LIMIT = 0.1901E-03
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+      525.188 MB WRITTEN ON ELEMENT SAVED DATA FILE: file0.esav
+      126.562 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
+      226.375 MB WRITTEN ON RESULTS FILE: file0.rth
+ *************** Write FE CONNECTORS *********
+
+ WRITE OUT CONSTRAINT EQUATIONS TO FILE= file.ce                                                                                                                                                                                                                                                             
+ ****************************************************
+ *************** FINISHED SOLVE FOR LS 1 *************
+
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.4891667    
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =       205.750
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   19:29:32  FEB 06, 2025 CP=    205.750
+
+ pv with dielec--Transient Thermal (Q5)                                        
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            CP =     205.766   TIME= 19:29:32
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ Set Encoding of XML File to:ISO-8859-1
+
+ Set Output of XML File to:
+     PARM,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,
+         ,     ,     ,     ,     ,     ,     ,
+
+ DATABASE WRITTEN ON FILE  parm.xml                                                                                                                                                                                                                                                            
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =       205.766
+
+
+
+ PRINTOUT RESUMED BY /GOP
+
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.4922222    
+
+ PARAMETER _PREPTIME =     4.000000000    
+
+ PARAMETER _SOLVTIME =     490.0000000    
+
+ PARAMETER _POSTTIME =     11.00000000    
+
+ PARAMETER _TOTALTIM =     505.0000000    
+
+ *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.08207421    
+
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE=  10.6897065    
+
+ *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
+
+ *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  264877.000    
+
+ /FCLEAN COMMAND REMOVING ALL LOCAL FILES
+ --- Total number of nodes = 264877
+ --- Total number of elements = 666900
+ --- Element load balance ratio = 1.08207421
+ --- Time to combine distributed files = 10.6897065
+ --- Sparse memory mode = 2
+ --- Number of DOF = 264877
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          2
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
+ *** WARNING ***                         CP =     206.203   TIME= 19:29:33
+ During this session the elapsed time exceeds the CPU time by 158%.      
+ This often indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or a particularly slow hard       
+ drive configuration.  This simulation can be expected to run faster on  
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2023 R1            Build: 23.1       Update: UP20221128   Platform: WINDOWS x64 
+Date Run: 02/06/2025   Time: 19:29     Process ID: 13912
+Operating System: Windows 11  (Build: 22631)
+
+Processor Model: AMD Ryzen 7 5800HS with Radeon Graphics
+
+Compiler: Intel(R) Fortran Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) C/C++ Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by AMD BLIS
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    4
+Number of threads per process requested :    1
+Total number of cores requested         :    4 (Distributed Memory Parallel)               
+MPI Type: INTELMPI
+MPI Version: Intel(R) MPI Library 2021.5 for Windows* OS
+
+
+GPU Acceleration: Not Requested
+
+Job Name: file0
+Input File: dummy.dat
+
+  Core                Machine Name   Working Directory
+ -----------------------------------------------------
+     0                     Tarunpc   C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A
+     1                     Tarunpc   C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A
+     2                     Tarunpc   C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A
+     3                     Tarunpc   C:\Users\thumm\Desktop\work\2023\_ProjectScratch\ScrCD3A
+ 
+Latency time from master to core     1 =    3.135 microseconds
+Latency time from master to core     2 =    3.042 microseconds
+Latency time from master to core     3 =    3.057 microseconds
+ 
+Communication speed from master to core     1 =  5880.23 MB/sec
+Communication speed from master to core     2 =  8028.50 MB/sec
+Communication speed from master to core     3 =  9409.66 MB/sec
+
+Total CPU time for main thread                    :      196.4 seconds
+Total CPU time summed for all threads             :      206.2 seconds
+
+Elapsed time spent obtaining a license            :        0.4 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        3.7 seconds
+Elapsed time spent solution - preprocessing       :       44.6 seconds
+Elapsed time spent computing solution             :      442.6 seconds
+Elapsed time spent solution - postprocessing      :       10.7 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+Equation solver computational rate                :       75.7 Gflops
+
+Sum of memory used on all processes               :     7274.0 MB
+Sum of memory allocated on all processes          :     9792.0 MB
+Physical memory available                         :         15 GB
+
+Total amount of I/O written to disk               :       65.0 GB
+Total amount of I/O read from disk                :      205.5 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2023 R1         Build 23.1         UP20221128    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)    956 MB     Max Scratch Used(Master)   1887 MB |
+ |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)  1544 MB |
+ |  Sum Database Used(All)       959 MB     Sum Scratch Used(All)      6315 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =        206.203       Time  =  19:29:33          |
+ |        Elapsed Time (sec) =        508.000       Date  =  02/06/2025        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

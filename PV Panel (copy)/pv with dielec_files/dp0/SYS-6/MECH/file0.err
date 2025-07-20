@@ -1,0 +1,28 @@
+/COM,ANSYS RELEASE 2023 R1           BUILD 23.1      UP20221128       12:16:42
+
+ *** WARNING ***                         CP =       8.188   TIME= 12:16:46
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       9.766   TIME= 12:16:48
+ Material number 49 (used by element 730055) should normally have at     
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** WARNING ***                         CP =      67.156   TIME= 12:17:47
+ The Distributed Sparse Matrix Solver is currently running in the        
+ out-of-core memory mode.  This memory mode may provide significantly    
+ worse performance compared to the in-core memory mode, depending on     
+ the amount of available system memory and I/O speed.  Please monitor    
+ the solver performance to ensure that the large amount of I/O to the    
+ solver files does not create a bottleneck for performance.              
+
+ *** WARNING ***                         CP =     160.797   TIME= 12:28:12
+ During this session the elapsed time exceeds the CPU time by 355%.      
+ This often indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or a particularly slow hard       
+ drive configuration.  This simulation can be expected to run faster on  
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 
